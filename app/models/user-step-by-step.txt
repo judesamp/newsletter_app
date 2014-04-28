@@ -1,0 +1,47 @@
+
+Home page consists of two sections
+  section on right half of page shows most recently published public newsletters
+  left half section is intro to the service complete with sign up
+
+Admin
+  If user is admin, there will be a link on page to admin section (where newsletters can be built)
+  Step through as Admin:
+  --Clicks Admin link, taken to admin dashboard (a series of pages aimed at building and publishing simple newsletters)
+    Admin dashboard shows 5-10 most recent newsletters (title/draft_name); this list can be filtered to show recently published newsletters, drafts most recently edited, or both.
+
+  --Admin clicks "Create Newsletter"
+
+    Admin now has the options related to creating a newsletter--create an event or create an article
+    --Admin clicks on create an article
+      Admin sees form for creating an article, including fields for title, body, and upload image (among other things)
+
+    --Admin clicks on create an event
+      Admin sees form for creating an even, including fields for event name, event description, and upload image (among other things)
+
+
+  --Admin clicks a published newsletter
+    Newsletter dashboard appears in middle of screen, along with skeleton of existing newsletter (basically a list of articles and event in the order of appearance). User can change order by drag and drop—or click on any Post (article or event) to edit that post.
+
+
+  --Admin clicks on a draft
+    Newsletter dashboard appears in middle of screen, along with skeleton of existing newsletter (basically a list of articles and event in the order of appearance). User can change order by drag and drop,  click on any Post (article or event) to edit that post, or create a new event or article by clicking the appropriate button.
+
+Notes...Admin also has the option to publish (or even unpublish) the articles on this dashboard page (which will be changing subtly throughout in response to admin clicks). Organization settings will also be available from any of the dashboard pages.
+
+
+User
+  If user is not admin, pathway is simpler
+  
+  -- User can search newsletters by state, city, etc.
+
+  -- User can click a newsletter to read it
+    On the newsletter page, user will have the opportunity to read and comment on a newsletter
+
+  -- User can click for more info where they will be taken to a plans page
+    On plans page, user will have opportunity to sign up for the service
+
+  -- User can sign up and attempt to connect to a newsletter (request to be emailed when newsletters are published, facebook or twitter updates, etc.)
+
+
+
+
