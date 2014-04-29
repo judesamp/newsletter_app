@@ -1,1 +1,31 @@
-new.html.haml
+.container-fluid
+	.col-md-8.col-md-offset-2
+
+	%h1 Add A New Organization
+
+	= form_for @new_organization, url: organizations_path do |f|
+		= f.label "Organization Name"
+		= f.text_field :name
+		%br
+		= f.label "Street"
+		= f.text_field :street_adress
+		%br
+		= f.label "City"
+		= f.text_field :city
+		%br
+		= f.label "State"
+		= f.text_field :state
+		%br
+		= f.label "Zip"
+		= f.text_field :zip
+		%br
+		= f.label "Email"
+		= f.text_field :email
+		%br
+		= f.label "Newsletter Title"
+		= f.text_field :newsletter_title
+		%br
+		= f.label "Status of Organization"
+		= f.text_field :status
+		%br
+		= f.submit "Create New Organization!"

@@ -1,1 +1,27 @@
-index.html.haml
+.container-fluid
+	.col-md-8.col-md-offset-2
+
+	= button_to "Add New Organization", new_organization_path, method: "get"
+	
+
+	%h1 All Organizations
+
+	- @all_organizations.each do |o|
+		= o.name
+		%br
+		= o.street_adress
+		%br
+		= o.city
+		%br
+		= o.state
+		%br
+		= o.zip
+		%br
+		= o.email
+		%br
+		= o.newsletter_title
+		%br
+		= o.status
+
+		%br
+		%br
