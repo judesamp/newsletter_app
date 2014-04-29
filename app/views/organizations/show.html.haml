@@ -1,1 +1,23 @@
-show.html.haml
+.container-fluid
+	.col-md-8.col-md-offset-2
+
+	%h1= @organization.name
+
+	= @organization.street_adress
+	%br
+	= @organization.city
+	%br
+	= @organization.state
+	%br
+	= @organization.zip
+	%br
+	= @organization.email
+	%br
+	= @organization.newsletter_title
+	%br
+	= @organization.status
+	%br
+	%br
+.btn-group
+	= link_to 'Edit', edit_organization_path(@organization), :class => "btn btn-warning"
+	= link_to 'Back', organizations_path, :class => "btn btn-default"

@@ -2,30 +2,39 @@
 	.col-md-8.col-md-offset-2
 
 	%h1 Add A New Organization
+	%br
 
 	= form_for @new_organization, url: organizations_path do |f|
 		= f.label "Organization Name"
 		= f.text_field :name
 		%br
+		%br
 		= f.label "Street"
 		= f.text_field :street_adress
+		%br
 		%br
 		= f.label "City"
 		= f.text_field :city
 		%br
+		%br
 		= f.label "State"
 		= f.text_field :state
+		%br
 		%br
 		= f.label "Zip"
 		= f.text_field :zip
 		%br
+		%br
 		= f.label "Email"
 		= f.text_field :email
+		%br
 		%br
 		= f.label "Newsletter Title"
 		= f.text_field :newsletter_title
 		%br
+		%br
 		= f.label "Status of Organization"
 		= f.text_field :status
 		%br
-		= f.submit "Create New Organization!"
+		%br
+		= f.submit "Create New Organization!", :class => "btn btn-default"

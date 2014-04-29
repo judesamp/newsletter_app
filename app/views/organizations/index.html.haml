@@ -1,13 +1,14 @@
 .container-fluid
 	.col-md-8.col-md-offset-2
 
-	= button_to "Add New Organization", new_organization_path, method: "get"
+	= button_to "Add New Organization", new_organization_path, method: "get", :class => "btn"
 	
 
 	%h1 All Organizations
+	%br
 
 	- @all_organizations.each do |o|
-		= o.name
+		%h4= o.name
 		%br
 		= o.street_adress
 		%br
@@ -22,6 +23,8 @@
 		= o.newsletter_title
 		%br
 		= o.status
+		%br
+		= link_to 'Edit', edit_organization_path(o), :class => "btn btn-warning"
 
 		%br
 		%br

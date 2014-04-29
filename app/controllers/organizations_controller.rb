@@ -17,10 +17,32 @@ class OrganizationsController < ApplicationController
 		end
 	end
 
+	def show
+		@organization = Organization.find(params[:id])
+	end
+
+	def edit
+		@organization = Organization.find(params[:id])
+	end
+
+	def update
+		@organization = Organization.find(params[:id])
+		if @organization.update_attributes(new_org_params)
+			redirect_to organizations_path
+		end
+	end
+
+	def destroy
+		@organization = Organization.find(params[:id])
+		if @organization.delete
+			redirect_to organizations_path
+		end
+	end
+
 	private
 
 	def new_org_params
-		params.require(:organization).permit(:name, :street_address, :city, :state, :zip, :email, :newsletter_title, :status)
+		params.require(:organization).permit(:name, :street_adress, :city, :state, :zip, :email, :newsletter_title, :status)
 	end
 
 end
