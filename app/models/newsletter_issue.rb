@@ -1,9 +1,9 @@
 class NewsletterIssue < ActiveRecord::Base
   validates_presence_of :title #to use as a draft name
-  validates :publish_on_cannot_be_in_the_past
-  validates :number, numericality: true
+  validate :publish_on_cannot_be_in_the_past
+  validate :number, numericality: true, :allow_nil => true
 
-  
+
   belongs_to :organization
   has_many :posts
   has_many :events, through: :posts
@@ -14,4 +14,5 @@ class NewsletterIssue < ActiveRecord::Base
     errors.add(:publish_on, "can't be in the past") if 
       !publish_on.blank? and publish_on < Date.today
   end
+
 end

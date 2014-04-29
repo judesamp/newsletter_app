@@ -1,10 +1,61 @@
 
+Attributes
+
+Org
+  name, address, email, newsletter_title, city, state, zip, status
+
+NewsletterIssues
+  title, number, organization_id, status, publish_on, publish_date
+
+Post
+  position
+
+Article
+  title, summary, body, author, article_image, tags?
+
+Event
+  event_name, description, contact_name, contact_email, contact_phone, event_start_date, event_end_date, expire_on, event_image
+
+##################################
+
+
+Associations and foreign keys
+
+Org
+  has_many :newsletters
+  foreign_keys: none
+
+NewsletterIssue
+  belongs_to :organization, 
+  has_many :events, through: :posts
+  has_many :articles, through: :posts
+  foreign_keys: organization_id
+
+Post
+  belongs_to :newsletter_issue
+  belongs_to :event
+  belongs_to :article
+  foreign_keys: newsletter_issue_id, event_id, article_id
+
+Article
+  has_many :issues, through: :posts
+
+Event
+  has_many :issues, through: :posts
+
+
+#########################
+Step through the app
+
+
+
 Home page consists of two sections
   section on right half of page shows most recently published public newsletters
   left half section is intro to the service complete with sign up
 
 Admin
   If user is admin, there will be a link on page to admin section (where newsletters can be built)
+
   Step through as Admin:
   --Clicks Admin link, taken to admin dashboard (a series of pages aimed at building and publishing simple newsletters)
     Admin dashboard shows 5-10 most recent newsletters (title/draft_name); this list can be filtered to show recently published newsletters, drafts most recently edited, or both.
@@ -41,6 +92,11 @@ User
     On plans page, user will have opportunity to sign up for the service
 
   -- User can sign up and attempt to connect to a newsletter (request to be emailed when newsletters are published, facebook or twitter updates, etc.)
+
+
+#################################
+
+Goals: nested form, upload, user, etc.
 
 
 
