@@ -1,1 +1,16 @@
-new.html.haml
+.container-fluid
+	.col-md-8.col-md-offset-2
+
+		%h1 Add A New Post
+		%br
+
+		= form_for @new_post, url: posts_path do |f|
+			= f.label "Post Position (An integer, affects position in newsletter"
+			= f.text_field :position
+			%br
+			%br
+			= f.label "Newsletter Issue"
+			= f.select :newsletter_issue_id, NewsletterIssue.all.collect {|issue| [ issue.title, issue.id ]}
+			%br
+			%br
+			= f.submit "Add Post", :class => "btn btn-default"

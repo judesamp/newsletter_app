@@ -1,1 +1,20 @@
-edit.html.haml
+.container-fluid
+	.col-md-8.col-md-offset-2
+
+		%h1 Edit Post
+		%br
+
+		= form_for @post, url: post_path do |f|
+			= f.label "Post Position (An integer, affects position in newsletter"
+			= f.text_field :position
+			%br
+			%br
+			= f.label "Newsletter Issue"
+			= f.select :newsletter_issue_id, NewsletterIssue.all.collect {|issue| [ issue.title, issue.id ]}
+			%br
+			%br
+			= f.submit "Update Post", :class => "btn btn-default"
+			.btn
+				= link_to 'Delete', post_path(@post), :method => :delete, :class => "btn btn-warning", :data => {:confirm => "Are you sure?"}
+			.btn
+				= link_to 'Back', posts_path, :class => "btn btn-default"

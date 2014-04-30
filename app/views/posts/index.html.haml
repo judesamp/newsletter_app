@@ -1,1 +1,20 @@
-index.html.haml
+.container-fluid
+	.col-md-8.col-md-offset-2
+
+		= button_to "Add New Post", new_post_path, method: "get", :class => "btn"
+		
+
+		%h1 All Posts
+		%br
+
+		- @all_posts.each do |post|
+			%h4= post.newsletter_issue.title
+			%br
+			Position Number: 
+			= post.position
+			%br
+			%br
+			= link_to 'Edit', edit_post_path(post), :class => "btn btn-warning"
+
+			%br
+			%br

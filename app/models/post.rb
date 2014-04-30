@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
   belongs_to :newsletter_issue
-  belongs_to :event
-  belongs_to :article
+  has_many :events
+  has_many :articles
 end

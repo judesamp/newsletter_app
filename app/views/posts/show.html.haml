@@ -1,1 +1,9 @@
-show.html.haml
+.container-fluid
+	.col-md-8.col-md-offset-2
+		%h1= @post.newsletter_issue.title
+		%br
+		Position Number: 
+		= @post.position
+		%br
+		%br
+		= link_to 'Edit', edit_post_path(@post), :class => "btn btn-warning"

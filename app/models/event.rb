@@ -1,4 +1,4 @@
 class Event < ActiveRecord::Base
-  has_many :posts
+  belongs_to :posts
   has_many :newsletter_issues, through: :posts
 end
