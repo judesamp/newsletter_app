@@ -23,13 +23,13 @@
 			= event.contact_phone
 			%br
 			Event Start Date: 
-			= event.event_start_date
+			= formatted_date(event.event_start_date)
 			%br
 			Event End Date: 
-			= event.event_end_date
+			= formatted_date(event.event_end_date)
 			%br
 			Event Listing Expires On: 
-			= event.expire_on
+			= formatted_date(event.expire_on)
 			/ %br
 			/ Event Post Position: 
 			/ = event.post.position

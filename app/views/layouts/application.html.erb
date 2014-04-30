@@ -6,8 +6,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body>  
 	<div class="jumbotron">
+		<div class="navbar navbar-default">
+		  <div class="navbar-header">
+		    <a class="navbar-brand" href="/organizations">Organizations</a>
+		    <a class="navbar-brand" href="/newsletter_issues">Newsletter Issues</a>
+		    <a class="navbar-brand" href="/posts">Posts</a>
+		    <a class="navbar-brand" href="/events">Events</a>
+		  </div>
+		</div>
 		<%= yield %>
 	</div>
 </body>
