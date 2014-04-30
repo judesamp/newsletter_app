@@ -1,1 +1,44 @@
-new.html.haml
+.container-fluid
+	.col-md-8.col-md-offset-2
+
+		%h1 Add A New Event
+		%br
+
+		= form_for @new_event, url: events_path do |f|
+			= f.label "Event Name"
+			= f.text_field :name
+			%br
+			%br
+			= f.label "Event Description"
+			= f.text_field :description
+			%br
+			%br
+			= f.label "Contact Name"
+			= f.text_field :contact_name
+			%br
+			%br
+			= f.label "Contact Email"
+			= f.text_field :contact_email
+			%br
+			%br
+			= f.label "Contact Phone"
+			= f.text_field :contact_phone
+			%br
+			%br
+			= f.label "Event Start Date"
+			= f.date_field :event_start_date
+			%br
+			%br
+			= f.label "Event End Date"
+			= f.date_field :event_end_date
+			%br
+			%br
+			= f.label "Event Listing Expires On"
+			= f.date_field :expire_on
+			%br
+			%br
+			= f.label "Post Position In Newsletter"
+			= f.select :post_id, Post.all.collect {|p| [ p.position, p.id ]}
+			%br
+			%br
+			= f.submit "Add Event", :class => "btn btn-default"

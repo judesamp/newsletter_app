@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+group :development do
+  gem "rails-erd"
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
