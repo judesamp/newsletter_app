@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   resources :organizations
   resources :events
-  resources :newsletters
+  resources :newsletter_issues
   resources :posts
   resources :articles
 

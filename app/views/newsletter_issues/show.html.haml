@@ -1,0 +1,18 @@
+.container-fluid
+	.col-md-8.col-md-offset-2
+		%h1= @newsletter.title
+		%br
+		Issue Number: 
+		= @newsletter.number
+		%br
+		Status: 
+		= @newsletter.status
+		%br
+		Date Published: 
+		= @newsletter.publish_date
+		%br
+		Organization: 
+		= @newsletter.organization.name
+		%br
+		%br
+		= link_to 'Edit', edit_newsletter_issue_path(@newsletter), :class => "btn btn-warning"

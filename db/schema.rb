@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140429183714) do
+ActiveRecord::Schema.define(version: 20140430012505) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20140429183714) do
     t.string   "title"
     t.integer  "number"
     t.string   "status"
-    t.date     "publish_on"
     t.date     "publish_date"
     t.integer  "organization_id"
     t.datetime "created_at"

@@ -1,46 +1,46 @@
 .container-fluid
 	.col-md-8.col-md-offset-2
 
-	%h1= "Edit: " + @organization.name
-	%br
-
-	= form_for @organization, url: organization_path do |f|
-		= f.label "Organization Name"
-		= f.text_field :name
-		%br
-		%br
-		= f.label "Street"
-		= f.text_field :street_adress
-		%br
-		%br
-		= f.label "City"
-		= f.text_field :city
-		%br
-		%br
-		= f.label "State"
-		= f.text_field :state
-		%br
-		%br
-		= f.label "Zip"
-		= f.text_field :zip
-		%br
-		%br
-		= f.label "Email"
-		= f.text_field :email
-		%br
-		%br
-		= f.label "Newsletter Title"
-		= f.text_field :newsletter_title
-		%br
-		%br
-		= f.label "Status of Organization"
-		= f.text_field :status
-		%br
-		%br
-		= f.submit "Update Organization!", :class => "btn btn-default"
+		%h1= "Edit: " + @organization.name
 		%br
 
-	.btn
-		= link_to 'Delete', organization_path(@organization), :method => :delete, :class => "btn btn-warning", :data => {:confirm => "Are you sure?"}
-	.btn
-		= link_to 'Back', organizations_path, :class => "btn btn-default"
+		= form_for @organization, url: organization_path do |f|
+			= f.label "Organization Name"
+			= f.text_field :name
+			%br
+			%br
+			= f.label "Street"
+			= f.text_field :street_adress
+			%br
+			%br
+			= f.label "City"
+			= f.text_field :city
+			%br
+			%br
+			= f.label "State"
+			= f.text_field :state
+			%br
+			%br
+			= f.label "Zip"
+			= f.text_field :zip
+			%br
+			%br
+			= f.label "Email"
+			= f.text_field :email
+			%br
+			%br
+			= f.label "Newsletter Title"
+			= f.text_field :newsletter_title
+			%br
+			%br
+			= f.label "Status of Organization"
+			= f.text_field :status
+			%br
+			%br
+			= f.submit "Update Organization!", :class => "btn btn-default"
+			%br
+
+		.btn
+			= link_to 'Delete', organization_path(@organization), :method => :delete, :class => "btn btn-warning", :data => {:confirm => "Are you sure?"}
+		.btn
+			= link_to 'Back', organizations_path, :class => "btn btn-default"

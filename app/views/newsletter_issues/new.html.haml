@@ -1,0 +1,28 @@
+.container-fluid
+	.col-md-8.col-md-offset-2
+
+		%h1 Add A New Newsletter Issue
+		%br
+
+		= form_for @new_newsletter_issue, url: newsletter_issues_path do |f|
+			= f.label "Issue Title"
+			= f.text_field :title
+			%br
+			%br
+			= f.label "Edition Number"
+			= f.text_field :number
+			%br
+			%br
+			= f.label "Status"
+			= f.text_field :status
+			%br
+			%br
+			= f.label "Publish Date"
+			= f.date_field :publish_date
+			%br
+			%br
+			= f.label "Organization"
+			= f.select :organization_id, Organization.all.collect {|org| [ org.name, org.id ]}
+			%br
+			%br
+			= f.submit "Create New Newsletter Issue!", :class => "btn btn-default"
